@@ -1,0 +1,8 @@
+[Plugin]
+Loader=python3
+Module=plugin
+IAge=2
+Name=Dropbox Music
+Description=Stream music from your dropbox...
+Authors=@frost_23
+Copyright=Copyright © 2017 @frost_23
