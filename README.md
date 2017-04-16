@@ -1,6 +1,7 @@
 # ABOUT
 
 @author frost-forever
+
 This package offers a plugin for the rhythmbox music player to stream music from dropbox using the Dropbox SDK.
 
 # INSTALLATION
