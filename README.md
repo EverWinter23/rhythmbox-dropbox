@@ -13,7 +13,7 @@ This package offers a plugin for the rhythmbox music player to stream music from
      * pip3 must be installed algonside python3.5.2 or python3.
      * It will
 3. Installing from source.
-    
+.. code-block:: console 
    $ git clone https://github.com/EverWinter23/rhythmbox-dropbox
    $ mkdir ~/.local/share/rhythmbox/plugins
    $ mv rhythmbox-dropbox ~/.local/share/rhythmbox/plugins/
