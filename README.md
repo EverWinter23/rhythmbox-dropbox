@@ -11,8 +11,7 @@ This package offers a plugin for the rhythmbox music player to stream music from
     $ pip3 install dropbox
 ```
     Note:
-     * pip3 must be installed algonside python3.5.2 or python3.
-     * It will
+     * pip3 must be installed alongside python3.5.2 or python3.
 3. Installing from source.
 ```
    $ git clone https://github.com/EverWinter23/rhythmbox-dropbox
