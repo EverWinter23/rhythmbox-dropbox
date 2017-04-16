@@ -1,26 +1,30 @@
 # ABOUT
 
+@author frost-forever
 This package offers a plugin for the rhythmbox music player to stream music from dropbox using the Dropbox SDK.
 
 # INSTALLATION
 
 1.  Install [dropbox SDK](https://github.com/dropbox/dropbox-sdk-python)
-2.  `pip3 install dropbox'
+.. code-block:: console
+    $ pip3 install dropbox
 
     Note:
      * pip3 must be installed algonside python3.5.2 or python3.
      * It will
-3. Installing the plugin 
-   'git clone https://github.com/EverWinter23/rhythmbox-dropbox'
-4. Make the plugins directory if it does not exist
-   'mkdir ~/.local/share/rhythmbox/plugins'
-   'cp rhythmbox-dropbox ~/.local/share/rhythmbox/plugins/'
-5. Enable the plugin from rhythmbox plugins menu under the name Dropbox Music.
+3. Installing from source.
+    
+   $ git clone https://github.com/EverWinter23/rhythmbox-dropbox
+   $ mkdir ~/.local/share/rhythmbox/plugins
+   $ mv rhythmbox-dropbox ~/.local/share/rhythmbox/plugins/
+ 
+2. Enable the plugin from rhythmbox plugins menu under the name Dropbox Music.
 
 # RESOLVING ERRORS
 1. Run the plugin using the following command
-   'rhythmbox -D Dropbox'
-2. See the console error and open an issue.
+.. code-block:: console
+   $ rhythmbox -D Dropbox
+2. See the console for the error and open an issue.
 
 # AUTHORS
 
