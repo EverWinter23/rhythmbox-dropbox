@@ -9,8 +9,6 @@ import dropbox
 from source import DropboxSource
 from lib import DropboxLibrary
 
-# only for me
-APP_TOKEN = 'bMxXoASKyNAAAAAAAAAAYlWGtAUZiosUo3zpKVCWKZJmhC9PvKDBLYZP6sHIbPsv'
 
 '''
 attributes
