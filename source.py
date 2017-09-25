@@ -9,10 +9,6 @@ from con.dropcon import DropCon
 from entry import DropboxEntryType
 from widget import OAuthDialog
 
-# only for me
-# to be removed
-APP_TOKEN = 'bMxXoASKyNAAAAAAAAAAYlWGtAUZiosUo3zpKVCWKZJmhC9PvKDBLYZP6sHIbPsv'
-
 '''
 class
  inherits from RB.Source
