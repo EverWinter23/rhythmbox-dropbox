@@ -24,7 +24,7 @@ class DropboxEntryType(RB.RhythmDBEntryType):
         # make it dropbox-music later... Done
         RB.RhythmDBEntryType.__init__(self, name='drobox-music')
         if dropcon != None:
-            self.client = dropcon.client
+            self.dropcon = dropcon
 
     '''
     about
@@ -35,9 +35,8 @@ class DropboxEntryType(RB.RhythmDBEntryType):
         print("getting the playback uri for dropbox-music entry")
 
         song_path = entry.dup_string(RB.RhythmDBPropType.LOCATION)
-        entry_metadata = self.client.media(song_path)
-        uri = entry_metadata['url']
-
+        uri = self.dropcon.get_song_uri(song_path)
+        print("uri of the song is... ", uri)
         return uri
 
     def do_can_sync_metadata(self, entry):

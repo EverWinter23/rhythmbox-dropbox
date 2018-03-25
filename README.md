@@ -6,7 +6,7 @@ This package offers a plugin for the rhythmbox music player to stream music from
 
 # INSTALLATION
 
-1.  Install [dropbox SDK](https://github.com/dropbox/dropbox-sdk-python)
+1. Install [dropbox SDK](https://github.com/dropbox/dropbox-sdk-python)
 ```
     $ pip3 install dropbox
 ```
@@ -20,6 +20,9 @@ This package offers a plugin for the rhythmbox music player to stream music from
 ```
  
 2. Enable the plugin from rhythmbox plugins menu under the name Dropbox Music.
+
+# SCREENSHOT
+![Rhymbox Dropbox](/screenshots/rhythm.png?raw=true "Not Much...")
 
 # RESOLVING ERRORS
 1. Run the plugin using the following command

@@ -136,6 +136,7 @@ class DropboxSource(RB.Source):
         self.load_songs()
 
     def auth(self, widget):
+    #def auth(self):
         '''this part only works for me'''
         '''
         access_token = APP_TOKEN

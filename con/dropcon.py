@@ -8,9 +8,9 @@ a small library for using dropbox api
 import webbrowser
 import os
 from dropbox import Dropbox
-from dropbox.client import DropboxOAuth2Flow
-from dropbox.client import DropboxClient
-from dropbox.client import DropboxOAuth2FlowNoRedirect
+from dropbox.oauth import DropboxOAuth2Flow
+from dropbox.dropbox import Dropbox
+from dropbox.oauth import DropboxOAuth2FlowNoRedirect
 
 # keys
 APP_KEY = '4np8lmnpzci1ho0'
@@ -61,10 +61,19 @@ class DropCon(object):
          obtained from dropbox for authorization
     '''
     def connect(self, auth_code):
-        self.access_token, self.userid = self.auth_flow.finish(auth_code)
+        print("trying to connect....")
 
-        self.client = DropboxClient(self.access_token)
-        self.dropbox = Dropbox(self.access_token)
+        
+        oauth_result = self.auth_flow.finish(auth_code)
+        self.access_token = oauth_result.access_token
+        self.client = Dropbox(self.access_token)
+        #self.dropbox = Dropbox(self.access_token)
+        '''
+        except Exception as e:
+            print("failed.....")
+            print('Error: %s' % (e,))
+            return
+        '''
 
     '''
     about
@@ -110,34 +119,16 @@ class DropCon(object):
         get all songs from the dropbox
         only gets mp3 files
     '''
-    def get_all_song_paths(self):
-        print("getting all song paths...")
-        mp3_metadata = self.client.search('/', '.mp3')
-        print("The metadata....")
-        print(mp3_metadata)
-        '''
-        extract path from mp3_metadata
-        '''
-        sounds = {}
-        sound = {}
-        k = 0
-        patht = [mp3_metadata[0]['path'].split('/')[1], ]
-        sounds[mp3_metadata[0]['path'].split('/')[1]] = []
-        for m in mp3_metadata:
-            path = m['path'].split('/')[1]
-            if path in patht:
-                sound = {}
-                sound['name'] = m['path'].split('/')[-1]
-                sound['index'] = k
-                sounds[path].append(sound)
-            else:
-                sounds[path] = []
-                patht.append(path)
-                sound = {}
-                sound['path'] = m['path'].split('/')[1:-1],
-                sound['name'] = m['path'].split('/')[-1]
-                sound['index'] = k
-                sounds[path].append(sound)
-            k += 1
+    def get_all_song_metadata(self):
+        print("getting all song's metada...")
+        search_result = self.client.files_search('', '.mp3')
+        return search_result.matches
 
-        return (mp3_metadata, sounds)
+    '''
+    about
+        returns temporary link to the file, whose
+        path has been provided
+    '''
+    def get_song_uri(self, song_path):
+        return self.client.files_get_temporary_link(song_path).link
+
