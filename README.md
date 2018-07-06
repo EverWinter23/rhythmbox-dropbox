@@ -26,7 +26,7 @@ so you will have to authorize the plugin every time.
   Music**.
  
 # SCREENSHOT
-![Rhymbox Dropbox](/screenshots/rhythm.png?raw=true "Not Much...")
+![Rhymbox Dropbox](/screenshots/plugin.png?raw=true "Not Much...")
 
 # RESOLVING ERRORS
 + Run the plugin using the following command
