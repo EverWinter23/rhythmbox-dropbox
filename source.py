@@ -4,7 +4,7 @@ file=source.py     lang=python3.5.2
 '''
 
 from gi.repository import RB
-from gi.repository import GdkPixbuf, Gio, GLib, GnomeKeyring, Gtk, GObject, Peas
+from gi.repository import GLib, Gtk
 from con.dropcon import DropCon
 from entry import DropboxEntryType
 from widget import OAuthDialog

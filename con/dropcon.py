@@ -8,8 +8,7 @@ a small library for using dropbox api
 import webbrowser
 import os
 from dropbox import Dropbox
-from dropbox.oauth import DropboxOAuth2Flow
-from dropbox.dropbox import Dropbox
+from dropbox import Dropbox
 from dropbox.oauth import DropboxOAuth2FlowNoRedirect
 
 # keys
